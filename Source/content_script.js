@@ -33,28 +33,23 @@ function handleText(textNode)
 }
 
 function decorateChar(char) {
-    var e = document.createElement("C"+String(char.charCodeAt(0)));
+    // Using the font element for now, might need to normalize another element if this doesn't work well
+    var e = document.createElement("font");
+    e.className = e.className + "C"+String(char.toLowerCase().charCodeAt(0))
     e.appendChild(document.createTextNode(char));
     return e;
 }
 
 function searchAndReplaceElement(textNode) {
     var strSrc = textNode.nodeValue; // for Text Nodes, the nodeValue property contains the text
-    var strSearch = "a";
-    var pos = strSrc.indexOf(strSearch);
-
-    if(pos >= 0) {
-        var fragment = document.createDocumentFragment();
-
-        if(pos > 0)
-            fragment.appendChild(document.createTextNode(strSrc.substr(0, pos)));
-
-        fragment.appendChild(decorateChar(strSearch));
-
-        if((pos + strSearch.length + 1) < strSrc.length)
-            fragment.appendChild(document.createTextNode(strSrc.substr(pos + strSearch.length)));
-
-        textNode.parentNode.replaceChild(fragment, textNode);
-        return true;
+    var fragment = document.createDocumentFragment();
+    for (var i in strSrc) {
+        j = "abcdefghijklmnopqrstuvxyz".indexOf(strSrc[i].toLowerCase())
+        if (j >= 0) {
+            fragment.appendChild(decorateChar(strSrc[i]));
+        } else {
+            fragment.appendChild(document.createTextNode(strSrc[i]))
+        }
     }
+    textNode.parentNode.replaceChild(fragment, textNode);
 }
