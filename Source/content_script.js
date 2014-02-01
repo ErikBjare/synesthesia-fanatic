@@ -29,14 +29,32 @@ function walk(node)
 
 function handleText(textNode) 
 {
-	var v = textNode.nodeValue;
-
-	v = v.replace(/\bThe Cloud\b/g, "My Butt");
-	v = v.replace(/\bThe cloud\b/g, "My butt");
-	v = v.replace(/\bthe Cloud\b/g, "my Butt");
-	v = v.replace(/\bthe cloud\b/g, "my butt");
-	
-	textNode.nodeValue = v;
+	searchAndReplaceElement(textNode)
 }
 
+function decorateChar(char) {
+    var e = document.createElement("C"+String(char.charCodeAt(0)));
+    e.appendChild(document.createTextNode(char));
+    return e;
+}
 
+function searchAndReplaceElement(textNode) {
+    var strSrc = textNode.nodeValue; // for Text Nodes, the nodeValue property contains the text
+    var strSearch = "a";
+    var pos = strSrc.indexOf(strSearch);
+
+    if(pos >= 0) {
+        var fragment = document.createDocumentFragment();
+
+        if(pos > 0)
+            fragment.appendChild(document.createTextNode(strSrc.substr(0, pos)));
+
+        fragment.appendChild(decorateChar(strSearch));
+
+        if((pos + strSearch.length + 1) < strSrc.length)
+            fragment.appendChild(document.createTextNode(strSrc.substr(pos + strSearch.length)));
+
+        textNode.parentNode.replaceChild(fragment, textNode);
+        return true;
+    }
+}
