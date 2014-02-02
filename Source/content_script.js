@@ -44,7 +44,7 @@ function searchAndReplaceElement(textNode) {
     var strSrc = textNode.nodeValue; // for Text Nodes, the nodeValue property contains the text
     var fragment = document.createDocumentFragment();
     for (var i in strSrc) {
-        j = "abcdefghijklmnopqrstuvxyz".indexOf(strSrc[i].toLowerCase())
+        j = "0123456789abcdefghijklmnopqrstuvxyz".indexOf(strSrc[i].toLowerCase())
         if (j >= 0) {
             fragment.appendChild(decorateChar(strSrc[i]));
         } else {
