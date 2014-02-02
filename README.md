@@ -1,37 +1,12 @@
-cloud-to-butt
+Synesthesia Fanatic
 =============
 
-Chrome extension that replaces occurrences of 'the cloud' with 'my butt'
+Chrome extension that gives every character a specific color as if the viewer had synesthesia.
 
-[Direct download of crx file](https://github.com/panicsteve/cloud-to-butt/blob/master/CloudToButt.crx?raw=true)
-
-Note that there are forks of this extension that simply replace 'cloud' with 'butt'.
-In my personal opinion, that approach is too broad and it's less funny as a result, but it is clearly a very
-polarizing issue in the cloud-to-butt user community.  Forks are free to do whatever they like.  But officially, _this_
-extension replaces only the phrase described above. Thank you for your concern.
-
-Screenshot Gallery
-------------------
-
-http://www.flickr.com/groups/cloud-to-butt/
-
-Installation
-------------
-
-In Chrome, choose Window > Extensions.  Drag CloudToButt.crx into the page that appears.
-
-Safari Version
---------------
-
-Can be found here: https://github.com/logancollins/cloud-to-butt-safari
-
-Firefox Version
----------------
-
-Can be found here: https://github.com/DaveRandom/cloud-to-butt-mozilla
+####*"Who in their right mind would use such a thing?!"*
+Well, this project was inspired by the paper [*"Pseudo-Synesthesia through Reading Books with Colored Letters"*](http://www.plosone.org/article/info%3Adoi%2F10.1371%2Fjournal.pone.0039799) by Olympia Colizoli, et al. This was just to see whether we could replicate their findings by more convenient means than reading custom print books.
 
 
-Opera Version
----------------
+##Installation
 
-Can be found here: https://github.com/DaveRandom/cloud-to-butt-opera
+In Chrome, choose Window > Extensions.  Enable developer mode and click `Load unpacked extension...` and choose to the Source directory.
