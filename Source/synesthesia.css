@@ -76,11 +76,12 @@
 /* / */
 .C47 { 
     /* INSERT COLOR */ 
-} 
+}
+
 
 /* 0 */
 .C48 { 
-    /* INSERT COLOR */ 
+    color: maroon;
 } 
 
 
@@ -90,7 +91,7 @@
 
 /* 1 */
 .C49 { 
-    /* INSERT COLOR */ 
+    color: gray;
 } 
 
 
@@ -100,17 +101,17 @@
 
 /* 2 */
 .C50 { 
-    /* INSERT COLOR */ 
+    color: cyan;
 } 
 
 
 .W50 { 
     background-color: #fff; 
-} 
+}
 
 /* 3 */
 .C51 { 
-    /* INSERT COLOR */ 
+    color: green;
 } 
 
 
@@ -120,7 +121,7 @@
 
 /* 4 */
 .C52 { 
-    /* INSERT COLOR */ 
+    color: yellow;
 } 
 
 
@@ -130,7 +131,7 @@
 
 /* 5 */
 .C53 { 
-    /* INSERT COLOR */ 
+    color: blue;
 } 
 
 
@@ -140,7 +141,7 @@
 
 /* 6 */
 .C54 { 
-    /* INSERT COLOR */ 
+    color: pink;
 } 
 
 
@@ -150,17 +151,17 @@
 
 /* 7 */
 .C55 { 
-    /* INSERT COLOR */ 
+    color: violet;
 } 
 
 
 .W55 { 
     background-color: #fff; 
-} 
+}
 
 /* 8 */
 .C56 { 
-    /* INSERT COLOR */ 
+    color: orange;
 } 
 
 
@@ -170,7 +171,7 @@
 
 /* 9 */
 .C57 { 
-    /* INSERT COLOR */ 
+    color: red;
 } 
 
 
@@ -249,7 +250,7 @@
 
 /* a */
 .C97 { 
-    color: #a00;
+    /* color: #a00; */
 } 
 
 
@@ -259,7 +260,7 @@
 
 /* b */
 .C98 { 
-    color: #0a0;
+    /* color: #00f; */
 } 
 
 
@@ -269,7 +270,7 @@
 
 /* c */
 .C99 { 
-    color: #00f;
+    /* color: #0a0; */
 } 
 
 
